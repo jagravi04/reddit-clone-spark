@@ -27,6 +27,7 @@ export interface Post {
   commentCount: number;
   createdAt: string;
   userVote?: 'up' | 'down' | null;
+  images?: string[]; // Support for multiple images
 }
 
 export interface Comment {
@@ -41,3 +42,10 @@ export interface Comment {
 }
 
 export type SortOption = 'hot' | 'new' | 'top';
+
+// Image handling types
+export interface ImageWithFallback {
+  src: string;
+  fallbackSrc: string;
+  alt: string;
+}

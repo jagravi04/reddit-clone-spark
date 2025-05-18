@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { ArrowUpCircle, ArrowDownCircle } from "lucide-react";
+import { ArrowUp, ArrowDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface VoteButtonsProps {
@@ -71,7 +71,7 @@ const VoteButtons = ({
           vote === 'up' ? "text-reddit-upvote" : "text-gray-500"
         )}
       >
-        <ArrowUpCircle size={iconSizes[size]} />
+        <ArrowUp size={iconSizes[size]} />
       </button>
       
       <span className={cn(
@@ -89,7 +89,7 @@ const VoteButtons = ({
           vote === 'down' ? "text-reddit-downvote" : "text-gray-500"
         )}
       >
-        <ArrowDownCircle size={iconSizes[size]} />
+        <ArrowDown size={iconSizes[size]} />
       </button>
     </div>
   );

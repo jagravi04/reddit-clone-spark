@@ -43,6 +43,9 @@
     --sidebar-accent-foreground: 240 6% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217 92% 60%;
+
+    --reddit-upvote: 16 100% 50%;
+    --reddit-downvote: 220 100% 50%;
   }
 
   .dark {
@@ -91,4 +94,14 @@
   .hover-card-effect {
     @apply transition-all duration-200 hover:border-reddit-primary hover:shadow-md;
   }
+}
+
+/* Image placeholder and fallback styling */
+.img-placeholder {
+  @apply bg-gray-200 animate-pulse rounded-md flex items-center justify-center;
+}
+
+.img-placeholder::before {
+  content: "Image unavailable";
+  @apply text-gray-400 text-sm;
 }
